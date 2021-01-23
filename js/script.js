@@ -147,6 +147,27 @@ $(document).ready(function () {
         
     });
 
+    $(".slider").slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+        variableWidth: true,
+        centerMode: false,
+        autoplay: false,
+        swipeToSlide: true,
+        nextArrow: '.arrow-right',
+        prevArrow: '.arrow-left',
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+    })
+
+
     if ($(window).width() < 992) {
         $(".hero__inner").addClass('hero-slider');
 
